@@ -1,4 +1,4 @@
-def call() {
+def call(String job, List parameters) {
     try {
         build job: job, parameters: parameters
     }
