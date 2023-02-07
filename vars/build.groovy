@@ -1,6 +1,4 @@
-package ru.avp
-
-def Build(String job, List parameters) {
+def call() {
     try {
         build job: job, parameters: parameters
     }
@@ -8,9 +6,3 @@ def Build(String job, List parameters) {
         echo "Some error is happened ${e}"
     }
 }
-
-def Echo(String text) {
-    ehco "${text}"
-}
-
-return this
