@@ -20,10 +20,8 @@ def enableTest() {
   */
 def cleanupHosts(List<String> hosts) {
     hosts.each { host ->
-        sshagent(credentials: ['user-creds'], ignoreMissing: true) {
-            sh label: "Cleanup ${host}", script: """#!/bin/bash +x
-                rm -rf /tmp/* || true
-            """
-        }
+        sh label: "Cleanup ${host}", script: """#!/bin/bash +x
+            ssh "${host}" "rm -rf /tmp/*" || true
+        """
     }
 }
