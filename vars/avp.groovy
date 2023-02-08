@@ -13,6 +13,11 @@ def enableTest() {
     sh 'env | sort'
 }
 
+/**
+  * Cleanup the hosts
+  *
+  * @param hosts List of hosts to cleanup
+  */
 def cleanupHosts(List<String> hosts) {
     hosts.each { host -> 
         echo "Cleanup ${host}"
