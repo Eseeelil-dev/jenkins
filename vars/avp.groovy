@@ -21,6 +21,6 @@ def enableTest() {
 def cleanupHosts(List<String> hosts) {
     hosts.each { host -> 
         echo "Cleanup ${host}"
-        sh 'hostname'
+        sh 'rm -rf /tmp/*'
     }
 }
