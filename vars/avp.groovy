@@ -1,4 +1,4 @@
-def build(Map config) {
+def buildSafe(Map config) {
     try {
         build job: config.job, parameters: config.parameters
     }
