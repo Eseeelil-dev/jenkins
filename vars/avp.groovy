@@ -20,7 +20,8 @@ def enableTest() {
   */
 def cleanupHosts(List<String> hosts) {
     hosts.each { host -> 
-        sh label: "Cleanup ${host}", script: """#!/bin/bash set +x
+        sh label: "Cleanup ${host}", script: """
+            #!/bin/bash +x
             rm -rf /tmp/* || true
         """
     }
