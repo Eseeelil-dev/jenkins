@@ -10,7 +10,7 @@ def buildSafe(Map config) {
 
 def enableTest() {
     echo 'Enable the tests'
-    sh 'env | sort'
+    sh 'free -h'
 }
 
 /**
